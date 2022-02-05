@@ -25,6 +25,9 @@ class SnapTest {
 
     @Test
     void isSnapRank() {
+    	Card test1 = new Card("C5");
+    	Card test2 = new Card("H5");
+    	assertEquals(true, snap.isSnap(test1,test2,false));
 
     }
 
