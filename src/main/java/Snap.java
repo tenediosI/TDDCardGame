@@ -38,6 +38,12 @@ public class Snap extends CardGame{
     			cardsMatch = true;
     		}
     	}
+    	else {
+    		if (previousCard.getCardRank().equals(currentCard.getCardRank())) {
+    			cardsMatch = true;	
+    	    }
+        }
+    	
         return cardsMatch;
     }
 
