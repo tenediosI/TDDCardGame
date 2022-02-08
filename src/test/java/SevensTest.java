@@ -36,7 +36,12 @@ class SevensTest {
 
     @Test
     void canPlayToSevenHandSixWithH7Hand(){
-        fail("Not yet implemented"); //Remove
+    	Card sevenHearts = new Card("H7");
+    	Card sixHearts = new Card("H6");
+    	Hand tableHand = new Hand();
+    	tableHand.add(sevenHearts);
+    	sevens.playToSevenHand(sixHearts, tableHand,true);
+    	assertEquals(sixHearts, tableHand.findACard("H6"));
     }
 
     @Test
