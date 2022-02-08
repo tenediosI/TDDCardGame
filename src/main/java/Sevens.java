@@ -85,8 +85,14 @@ public class Sevens extends CardGame{
     		return playCard;
     	}
     	else {
-    		return false;
+    		for (Card x : sevensHand.handOfCards) {
+    			if (x.getCardRank().getValue()-1 == card.getCardRank().getValue() || x.getCardRank().getValue()+1 == card.getCardRank().getValue()) {
+    				sevensHand.add(card);
+    				return playCard;
+    			}
+    		}
     	}
+    	return false;
     }
 
     protected boolean playToSevenTableHands(Card card, Hand[] sevenTableHands,boolean playCard){

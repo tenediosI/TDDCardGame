@@ -20,8 +20,8 @@ class SevensTest {
 
     @Test
     void playToSevenHandCanNotPlaySevenToHandWithCards(){
-    	Card sevenHearts = new Card("7H");
-    	Card testCard = new Card("2H");
+    	Card sevenHearts = new Card("H7");
+    	Card testCard = new Card("H2");
     	sevensTableHands[0].add(testCard);
         assertEquals(false, sevens.playToSevenHand(sevenHearts, sevensTableHands[0],true));
     }
