@@ -80,7 +80,19 @@ public class Sevens extends CardGame{
     }
 
     protected boolean playToSevenHand(Card card, Hand sevensHand, boolean playCard){
-    	return playCard;
+    	if (sevensHand.isEmpty()) {
+    		sevensHand.add(card);
+    		return playCard;
+    	}
+    	else {
+    		for (Card x : sevensHand.handOfCards) {
+    			if (x.getCardRank().getValue()-1 == card.getCardRank().getValue() || x.getCardRank().getValue()+1 == card.getCardRank().getValue()) {
+    				sevensHand.add(card);
+    				return playCard;
+    			}
+    		}
+    	}
+    	return false;
     }
 
     protected boolean playToSevenTableHands(Card card, Hand[] sevenTableHands,boolean playCard){
