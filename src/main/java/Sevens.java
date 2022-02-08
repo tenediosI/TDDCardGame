@@ -87,7 +87,7 @@ public class Sevens extends CardGame{
     	else {
     		for (Card x : sevensHand.handOfCards) {
     			if (x.getCardRank().getValue()-1 == card.getCardRank().getValue() || x.getCardRank().getValue()+1 == card.getCardRank().getValue()) {
-    				sevensHand.add(card);
+    				
     				return playCard;
     			}
     		}
