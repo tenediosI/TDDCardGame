@@ -46,7 +46,12 @@ class SevensTest {
 
     @Test
     void canNotPlayToSevenHandFiveWithH7Hand(){
-        fail("Not yet implemented"); //Remove
+    	Card sevenHearts = new Card("H7");
+    	Card fiveHearts = new Card("H5");
+    	Hand tableHand = new Hand();
+    	tableHand.add(sevenHearts);
+    	sevens.playToSevenHand(fiveHearts, tableHand,true);
+    	assertEquals(null, tableHand.findACard("H5"));
     }
 
     @Test
