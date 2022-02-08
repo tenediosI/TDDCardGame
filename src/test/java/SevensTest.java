@@ -66,7 +66,11 @@ class SevensTest {
 
     @Test
     void canPlayToSevenHandEightWithH7Hand(){
-        fail("Not yet implemented"); //Remove
+    	Card sevenHearts = new Card("H7");
+    	Card eightHearts = new Card("H8");
+    	Hand tableHand = new Hand();
+    	tableHand.add(sevenHearts);
+    	assertEquals(true, sevens.playToSevenHand(eightHearts, tableHand,true));
     }
 
     @Test
