@@ -15,7 +15,7 @@ class SevensTest {
     @Test
     void playToSevenHandCanPlaySevenToEmptyHand(){
     	Card sevenHearts = new Card("7H");
-        assertEquals(true, sevens.canPlayACard(sevenHearts, sevensTableHands));
+        assertEquals(true, sevens.playToSevenHand(sevenHearts, sevensTableHands[0],true));
     }
 
     @Test
