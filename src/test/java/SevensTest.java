@@ -20,7 +20,10 @@ class SevensTest {
 
     @Test
     void playToSevenHandCanNotPlaySevenToHandWithCards(){
-        fail("Not yet implemented"); //Remove
+    	Card sevenHearts = new Card("7H");
+    	Card testCard = new Card("2H");
+    	sevensTableHands[0].add(testCard);
+        assertEquals(false, sevens.playToSevenHand(sevenHearts, sevensTableHands[0],true));
     }
 
     @Test
