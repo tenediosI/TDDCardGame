@@ -29,10 +29,9 @@ class SevensTest {
     @Test
     void playToSevenHandSevenToEmptyHand(){
     	Card sevenHearts = new Card("7H");
-    	Hand holdingHand = new Hand();
     	Hand tableHand = new Hand();
-    	holdingHand.add(sevenHearts);
-    	assertEquals(true, sevens.playToSevenHand(sevenHearts, holdingHand,true));
+    	sevens.playToSevenHand(sevenHearts, tableHand,true);
+    	assertEquals(sevenHearts, tableHand.findACard("7H"));
     }
 
     @Test
