@@ -81,6 +81,7 @@ public class Sevens extends CardGame{
 
     protected boolean playToSevenHand(Card card, Hand sevensHand, boolean playCard){
     	if (sevensHand.isEmpty()) {
+    		sevensHand.add(card);
     		return playCard;
     	}
     	else {
