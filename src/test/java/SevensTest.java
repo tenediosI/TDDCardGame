@@ -14,7 +14,8 @@ class SevensTest {
 
     @Test
     void playToSevenHandCanPlaySevenToEmptyHand(){
-        fail("Not yet implemented"); //Remove
+    	Card sevenHearts = new Card("7H");
+        assertEquals(true, sevens.canPlayACard(sevenHearts, sevensTableHands));
     }
 
     @Test
